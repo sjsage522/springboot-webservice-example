@@ -32,6 +32,17 @@ deploy:
     local_dir: deploy
     wait-until-deployed: true
 
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: junseok-springboot-webservice-build # S3 버킷
+    key: springboot-webservice-example.zip      # 빌드파일을 압축해서 전달
+    bundle_type: zip
+    application: springboot-webservice-example
+    deployment_group: springboot-webservice-example-group
+    region: ap-northeast-2
+    wait-until-deployed: true
+
 # CI 실행 완료 시 메일로 알람
 notifications:
   email:
