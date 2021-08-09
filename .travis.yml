@@ -14,11 +14,13 @@ cache:
 
 script: "./gradlew clean build"
 
+# deploy 명령어가 실행되기 전에 수행
 before_deploy:
   - zip -r springboot-webservice-example *
   - mkdir -p deploy
   - mv springboot-webservice-example.zip deploy/springboot-webservice-example.zip
 
+# S3로 파일 업로드 혹은 CodeDeploy로 배포 등 외부 서비스와 연동될 행위들을 선언
 deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
