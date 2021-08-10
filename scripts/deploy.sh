@@ -36,4 +36,4 @@ echo "> $JAR_NAME 실행"
 nohub java -jar \
     -Dspring.config.location=classpath:/application.yml,classpath:/application-real.yml,/home/ec2-user/app/applicaion-oauth.yml,/home/ec2-user/app/application-real-db.yml \
     -Dspring.profiles.active=real \
-    $JAR_NAME > $REPOSITORY/nohub.out 2>&1 &
+    $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
