@@ -33,6 +33,6 @@ test {
     useJUnitPlatform()
 }
 
-manifest {
-    attributes 'Main-Class': 'io.wisoft.springbootwebserviceexample.Application'
+jar {
+    enabled = false
 }
