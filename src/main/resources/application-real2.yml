@@ -1,0 +1,10 @@
+server:
+  port: 8082
+
+spring:
+  profiles:
+    include: oauth,rael-db
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  session:
+    store-type: jdbc
