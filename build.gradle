@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'io.wisoft'
-version = '1.0.1-SNAPSHOT'
+version = '1.0.1-SNAPSHOT-'+new Date().format("yyyMMddHHmmss")
 sourceCompatibility = '1.8'
 
 repositories {
